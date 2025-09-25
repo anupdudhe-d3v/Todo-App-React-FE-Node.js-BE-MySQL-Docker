@@ -20,3 +20,8 @@ CREATE TABLE IF NOT EXISTS todos (
     completed TINYINT(1) DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Create user and allow access from any host
+CREATE USER IF NOT EXISTS 'todo_user'@'%' IDENTIFIED BY '12345678';
+GRANT ALL PRIVILEGES ON todos_db.* TO 'todo_user'@'%';
+FLUSH PRIVILEGES;
