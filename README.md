@@ -45,3 +45,19 @@ CREATE TABLE todos (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
+### Frontend setup 
+
+once be is deployed kindly update the be url in the fe .env file.
+```
+VITE_API_BASE=http://apiurl:3001
+```
+to be deployed on docker (install docker in your system)
+```
+docker build .
+```
+```
+docker run -d -p  80:80 imageid
+```
+
+
+
