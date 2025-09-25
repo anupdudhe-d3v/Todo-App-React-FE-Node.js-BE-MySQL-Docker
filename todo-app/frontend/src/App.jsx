@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getTodos, createTodo, toggleTodo, deleteTodo } from './api'
+import { getTodos, createTodo, toggleTodo, deleteTodo } from './api/todos'
 
 
 export default function App(){
